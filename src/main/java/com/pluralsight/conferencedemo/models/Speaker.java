@@ -33,7 +33,7 @@ public class Speaker {
         this.speakerPhoto = speakerPhoto;
     }
 
-    @ManyToMany(mappedBy = "speakers")
+    @ManyToMany(mappedBy = "speakers", cascade = CascadeType.ALL)
     @JsonIgnore
     List<Session> sessions;
 
